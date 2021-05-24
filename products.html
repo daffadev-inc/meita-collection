@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+
+        {% for product in site.products %}
+          <section class="entry product-front" itemscope itemtype="http://schema.org/Product">
+
+        		<div class="style">
+        			<a href="{{ product.url }}">
+        				<img alt="{{ product.title }}" src="{{ product.featured_image_path }}" itemprop="image">
+        			</a>
+        		</div>
+
+            <div class="product-details" style="font-size: 12px;">
+              <div class="product-name" itemprop="name">
+			          <span><a href="{{ product.url }}">{{ product.title }}</a></span>
+              </div>
+<div class="price-coll">
+              <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span itemprop="priceCurrency" content="IDR">IDR</span>
+                <span itemprop="price" content="{{ product.price }}">{{ product.price }}</span>
+<link itemprop="availability" href="https://schema.org/InStock" />
+      </div>
+<div class="riv" itemprop="review" itemscope itemtype="https://schema.org/Review">
+    <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+<span class="iconify" data-icon="mdi:star-outline" data-inline="false" style="color:#cbb616;"></span>
+      <meta itemprop="worstRating" content = "1">
+      <span itemprop="ratingValue">{{product.rating}}</span>/
+      <span itemprop="bestRating">5</span>
+        </div>
+    </div>
+  </div>
+			</div>
+
+          </section>
+        {% endfor %}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Name – Checkout</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="Web Developer from Somewhere">
+    <meta property="og:description" content="Web Developer from Somewhere" />
+    
+    <meta name="author" content="Your Name" />
+
+    
+    <meta property="og:title" content="Checkout" />
+    <meta property="twitter:title" content="Checkout" />
+    
+
+    <!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+<link rel="alternate" type="application/rss+xml" title="Your Name - Web Developer from Somewhere" href="/feed.xml" />
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <div class="wrapper-masthead">
+    
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="/images/jekyll-logo.png" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Your Name</a></h1>
+            <p class="site-description">Web Developer from Somewhere</p>
+          </div>
+
+          <nav>
+  
+            <a href="/blogs/">Blogs</a>
+  
+            <a href="/products/">Products</a>
+  
+            <a href="/about/">About</a>
+  
+          </nav>
+        </header>
+      </div>
+</div>
+
+     <div class="container main grid flex">
+        <div id="main" role="main">
+          <article class="page">
+
+  <h1>Checkout</h1>
+
+  <div class="entry">
+    <style>
+#cart-menu{display:none;}
+</style>
+<form class='wrapHead data-form validate-form' id='whatsapp-order'>
+<div style="max-width: 656px;padding:5%;width: 100%;margin: 0 auto;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
+      <span>Pembayaran </span>sebesar <b><span class="simpleCart_total"></span></b><small> *belum termasuk ongkir </small>
+<input class='order' id='AdminToko' type='hidden'/>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Nama Lengkap</ion-label>
+          <ion-input id='nama' class='nama wajib' placeholder='Nama Lengkap' type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">No. WhatsApp</ion-label>
+          <ion-input id='nomor' class='nomor wajib' placeholder='No. WhatsApp' onkeypress='return hanyaAngka(event)' type="number"></ion-input>
+        </ion-item>
+		<ion-item>
+          <ion-label>Pilih Kurir</ion-label>
+          <ion-select id='kurir' class='informasi wajib' placeholder='Kurir' value="Tidak Dipilih" interface="action-sheet">
+            <ion-select-option value="J%26T Express">J&T Express (C.O.D ongkir)</ion-select-option>
+            <ion-select-option value="JNE Express">JNE Express</ion-select-option>
+            <ion-select-option value="*GoSend">*GoSend</ion-select-option>
+            <ion-select-option value="*GrabExpress">*GrabExpress</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Pengiriman</ion-label>
+          <ion-input id='alamat' class='alamat wajib' placeholder="Alamat Rumah"></ion-input>
+          <ion-input id='kota' class='kota wajib' placeholder="Kota"></ion-input>
+          <ion-input id='provinsi' class='provinsi wajib' placeholder="Provinsi"></ion-input>
+          <ion-input id='kodepos' class='kodepos wajib' placeholder="Kode Pos"></ion-input>
+        </ion-item>
+      </ion-list>
+      <a type="button" id='order' class="button order" style="float:right;">Send Order</a>
+</div></form>
+      <div id='recaptcha' class="g-recaptcha"
+          data-sitekey=""
+          data-callback="onSubmit"
+          data-size="invisible"></div>
+    <script>onload();</script>
+
+
+  </div>
+</article>
+
+        </div>
+    </div>
+
+    <div class="wrapper-footer">
+        <footer class="footer">
+          <div class="linklist"><a href="">Your Name</a> &copy; 2021</div> <div class="popWin"> Developed with ❤️ by <a href="https://daffadev.my.id/" itemprop="copyrightHolder" itemscope="" itemtype="http://schema.org/Person"><b itemprop="name"> NdanG</b></a></a></div>
+
+        </footer>
+    </div>
+
+    <script src="/js/jquery-2.2.4.min.js"></script>
+    <script src="/js/simpleCart.js"></script>
+    <script async src="/js/main.js"></script>
+    <script async src="/js/responsive-menu.js"></script>
+
+    
+
+    
+
+    
+
+  </body>
+</html>

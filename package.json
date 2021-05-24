@@ -1,0 +1,24 @@
+{
+  "name": "Plus62.olshop",
+  "version": "0.1.0",
+  "description": "Jual Produk & Jasa Bordir Tasikmalaya.",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "website",
+    "url": "https://shop.plus62store.my.id"
+  },
+  "author": "NdanG",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://plus62store.my.id"
+  },
+  "homepage": "https://plus62store.my.id",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.6.3",
+    "gulp-uglify": "^2.1.2"
+  }
+}
