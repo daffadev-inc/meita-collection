@@ -3,13 +3,13 @@ layout: default
 ---
 
 
-      <main class="content single-product simpleCart_shelfItem" itemscope itemtype="http://schema.org/Product">
+      <main class="content card single-product simpleCart_shelfItem" itemscope itemtype="http://schema.org/Product">
 
         <section class="product-image">
           <div class="styles">
             {% for style in page.styles %}
           		<div id="product-{{ forloop.index }}" class="style" {% unless forloop.first %}style="display: none;"{% endunless %}>
-        				<img alt="{{ page.title }}" src="{{ style.image_path }}" style="margin-bottom: -7px;" itemprop="image">
+        				<img alt="{{ page.title }}" src="{{ style.image_path }}" itemprop="image">
           		</div>
           	{% endfor %}
           </div>
@@ -39,16 +39,15 @@ layout: default
               <div id="product-{{ forloop.index }}"{% if forloop.first %} class="item_color"{% endif %} style="background-color: {{ style.color }}"><span class="display-none">{{ style.name }}</span></div>
             {% endfor %}
         	</div>
-<p/>
+<div class="selecting">
           <span class="margin-bottom-0">Model:</span>
-          <select class="item_tali" style="-webkit-appearance:unset;">
+          <select class="item_tali">
             {% for model in page.tali %}
               <option value="{{ model }}"> {{ model }} </option>
             {% endfor %}
           </select>
-<p/>
           <span class="margin-bottom-0">Quantity:</span>
-          <select class="item_Quantity" style="-webkit-appearance:unset;">
+          <select class="item_Quantity">
             <option value="1"> 1 </option>
             <option value="2"> 2 </option>
             <option value="3"> 3 </option>
@@ -58,6 +57,7 @@ layout: default
             <option value="7"> 7 </option>
             <option value="8"> 8 </option>
           </select>
+</div>
 <p/>
           <a id="item_add" class="item_add button" href="javascript:;"> Add to Cart </a></span>
         </section>
