@@ -177,16 +177,12 @@ img {
 }
 
 input {
-  overflow: visible;
-  text-align: center;
-  border: none;
-  background: none;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 20px;
-  width: 42px;
-  padding-top: 3px;
-  color: #1c1d1d;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  padding: 1vh;
+  margin-bottom: 0vh;
+  outline: none;
+  width: 100%;
+  background-color: #f7f7f7;
 }
 
 .gmnoprint img {

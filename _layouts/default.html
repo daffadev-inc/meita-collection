@@ -14,7 +14,43 @@
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css" />
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/fancybox/dist/jquery.fancybox.min.css" />
+<script src="{{ site.baseurl }}/assets/fancybox/dist/jquery.fancybox.min.js"></script>
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    function onSubmit(token) {
+      alert('Terimakasih ' + document.getElementById('order').value);
+    }
+
+    function validate(event) {
+      event.preventDefault();
+      if (!document.getElementById('nama').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('nomor').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('kurir').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('alamat').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('kota').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('provinsi').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('kodepos').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      }
+     {
+        grecaptcha.execute('checkout');
+      }
+    }
+
+    function onload() {
+      var element = document.getElementById('order');
+      element.onclick = validate;
+    }
+  </script>
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
@@ -67,18 +103,19 @@
       }  
     }
 </script>
-    <script src="{{ site.url }}/js/jquery-2.2.4.min.js"></script>
-    <script src="{{ site.url }}/js/simpleCart.js"></script>
-    <script async src="{{ site.url }}/js/main.js"></script>
-    <script async src="{{ site.url }}/js/responsive-menu.js"></script>
+    <script src="{{ site.baseurl }}/js/jquery-2.2.4.min.js"></script>
+    <script src="{{ site.baseurl }}/js/simpleCart.js"></script>
+    <script async src="{{ site.baseurl }}/js/main.js"></script>
+    <script async src="{{ site.baseurl }}/js/responsive-menu.js"></script>
 
     {% if page.url contains '/products/' %}
-      <script async src="{{ site.url }}/js/style-picker.js"></script>
-      <script async src="{{ site.url }}/js/add-to-cart.js"></script>
+      <script async src="{{ site.baseurl }}/js/style-picker.js"></script>
+      <script async src="{{ site.baseurl }}/js/add-to-cart.js"></script>
+      <script async src="{{ site.baseurl }}/js/question.js"></script>
     {% endif %}
 
-    {% if page.url == '/checkout/' %}
-      <script async src="{{ site.url }}/js/checkout.js"></script>
+    {% if page.url == '/cart' %}
+      <script async src="{{ site.baseurl }}/js/form-order.js"></script>
     {% endif %}
 
     {% include analytics.html %}

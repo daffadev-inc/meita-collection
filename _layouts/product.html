@@ -37,7 +37,7 @@ layout: default
         	</div>
 <div class="selecting">
           <span class="mobile-hide">Model:</span>
-          <select class="item_tali">
+          <select class="item_model">
             {% for model in page.tali %}
               <option value="{{ model }}"> {{ model }} </option>
             {% endfor %}
@@ -46,7 +46,7 @@ layout: default
               <button class="btn btn-min btn-number" id="minus" onclick="minus()">
                 <i class="fa fa-minus-circle" aria-hidden="true"></i>
               </button>
-          <input type="text" id="count" class="input-group-field item_Quantity" value="1" min="1" max="100" disabled/>
+          <input type="text" id="count" class="input-group-field item_Quantity" value="1" min="1" max="100" style="text-align: center;border: none;background: #fff0;" disabled />
               <button class="btn btn-plus btn-number" id="plus" onclick="plus()">
                   <i class="fa fa-plus-circle" aria-hidden="true"></i>
               </button>
@@ -59,7 +59,8 @@ layout: default
 <p/>
 <div class="mobile-hide">
 <div class="ngarumpul">
-<span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="50px" data-height="50px"></span>
+<a type="button" data-fancybox="" data-src="#whatsapp" href="javascript:;">
+<span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="50px" data-height="50px"></span></a>
           <button id="item_add" class="btn item_add button" href="javascript:;" style="float: right;"> Add to Cart </button></div>
 </div>
         </section>
@@ -68,8 +69,22 @@ layout: default
 <div class="tombol-2">
 <div class="ngumpul"><a href="/cart/" id="cart-menu">
 <span class="iconify" data-icon="uil:shopping-bag" data-inline="false" style="color: #4183C4;" data-width="50px" data-height="50px"></span><span class="simpleCart_quantity" style="position: absolute;left: 40px;top: 10px;background: red;padding: 0px 6px;border-radius: 100%;color: #fff;font-size: 14px;font-weight: bold;"></span></a>
-<span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="50px" data-height="50px"></span></div>
+<a type="button" data-fancybox="" data-src="#whatsapp" href="javascript:;">
+<span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="50px" data-height="50px"></span></a></div>
           <a id="item_add" class="btn item_add button" href="javascript:;" style="float: right;"> Add to Cart </a></div></div>
 </div>
+<form action="" method="post" style="display:none;width:100%;max-width:360px;margin:0px;align-items:stretch;" validate-form' id='whatsapp'>
+<input class='pertanyaan' id='nomorAdmin' type='hidden'/>
+        <small style="font-size:12px;">
+            Assalamualaikum! lengkapi data berikut
+        </small>
+        <div>
+            <input class='nama wajib' placeholder='Nama Lengkap' type="text" style="margin-bottom:40px;border-color:#07bc4c"></input>
+            <textarea class='tanya wajib' placeholder='Pertanyaan' type="text" style="border-color:#07bc4c;max-width: 320px;width: -webkit-fill-available;"></textarea>
+        </div>
+        <div class="mb-0 text-right">
+            <a type="button" class="button sendWAclik kirim" style="background:#07bc4c">Kirim</a>
+        </div>
+    </form>
 
       </main>

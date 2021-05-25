@@ -30,7 +30,43 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 <link rel="alternate" type="application/rss+xml" title="Meita Collection - Koleksi Fashion Berkualitas" href="/feed.xml" />
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="/assets/fancybox/dist/jquery.fancybox.min.css" />
+<script src="/assets/fancybox/dist/jquery.fancybox.min.js"></script>
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    function onSubmit(token) {
+      alert('Terimakasih ' + document.getElementById('order').value);
+    }
+
+    function validate(event) {
+      event.preventDefault();
+      if (!document.getElementById('nama').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('nomor').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('kurir').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('alamat').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('kota').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('provinsi').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('kodepos').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      }
+     {
+        grecaptcha.execute('checkout');
+      }
+    }
+
+    function onload() {
+      var element = document.getElementById('order');
+      element.onclick = validate;
+    }
+  </script>
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 

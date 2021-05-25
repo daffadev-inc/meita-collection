@@ -28,7 +28,43 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 <link rel="alternate" type="application/rss+xml" title="Meita Collection - Koleksi Fashion Berkualitas" href="/feed.xml" />
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="/assets/fancybox/dist/jquery.fancybox.min.css" />
+<script src="/assets/fancybox/dist/jquery.fancybox.min.js"></script>
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    function onSubmit(token) {
+      alert('Terimakasih ' + document.getElementById('order').value);
+    }
+
+    function validate(event) {
+      event.preventDefault();
+      if (!document.getElementById('nama').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('nomor').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('kurir').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('alamat').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('kota').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('provinsi').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      } else if (!document.getElementById('kodepos').value) {
+        alert("Kamu Harus mengisi semua kolom.");
+      }
+     {
+        grecaptcha.execute('checkout');
+      }
+    }
+
+    function onload() {
+      var element = document.getElementById('order');
+      element.onclick = validate;
+    }
+  </script>
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
@@ -298,9 +334,9 @@ a:hover {
 .box-belanja sp.sub-total{display:inline-block;color:#333}
 .box-belanja .item-remove,.simpleCart_items .item-remove{float:right;display:block;position:relative;}
 .box-belanja .item-link {background:#0000001f;margin: 3px -5px -5px;padding: 3px 5px;}
-.box-belanja .simpleCart_increment{background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z' fill='%23a6a6ad'/></svg>")!important}
-.box-belanja .simpleCart_increment,.box-belanja .simpleCart_decrement{width:20px;height:20px;cursor:pointer;display:inline-block;background-image:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7' fill='%23a6a6ad'/></svg>");background-size:20px 20px;background-position:center center;background-repeat:no-repeat;vertical-align:middle;text-indent:-9999px}
-.box-belanja .item-remove a.simpleCart_remove,.simpleCart_items .item-remove a.simpleCart_remove{display:block;width:20px;height:20px;background:url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8.46,11.88L9.87,10.47L12,12.59L14.12,10.47L15.53,11.88L13.41,14L15.53,16.12L14.12,17.53L12,15.41L9.88,17.53L8.47,16.12L10.59,14L8.46,11.88M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z' fill='%23a6a6ad'/></svg>") no-repeat;text-indent:-9999px;background-size:20px}
+.box-belanja .simpleCart_increment{background-image:url("data:image/svg+xml,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" fill="%23a6a6ad"/></svg>")!important}
+.box-belanja .simpleCart_increment,.box-belanja .simpleCart_decrement{width:20px;height:20px;cursor:pointer;display:inline-block;background-image:url("data:image/svg+xml,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,13H17V11H7" fill="%23a6a6ad"/></svg>");background-size:20px 20px;background-position:center center;background-repeat:no-repeat;vertical-align:middle;text-indent:-9999px}
+.box-belanja .item-remove a.simpleCart_remove,.simpleCart_items .item-remove a.simpleCart_remove{display:block;width:20px;height:20px;background:url("data:image/svg+xml,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8.46,11.88L9.87,10.47L12,12.59L14.12,10.47L15.53,11.88L13.41,14L15.53,16.12L14.12,17.53L12,15.41L9.88,17.53L8.47,16.12L10.59,14L8.46,11.88M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" fill="%23a6a6ad"/></svg>") no-repeat;text-indent:-9999px;background-size:20px}
 .box-belanja a.view-cart,.box-belanja a.tombol-bukatutup{position:relative;display:inline-block;color:#ffffff;padding:5px 10px;border-radius:15px;text-align:center;width:40%}
 .box-belanja a.view-cart{background:#20d374}
 .box-belanja a.tombol-bukatutup{background:#ff5621}
@@ -336,16 +372,45 @@ a:hover {
                 <div class="col" style="padding-left:0;"><span class="simpleCart_quantity"></span></div>
                 <div class="col text-right"><span class="simpleCart_total"></span></div>
             </div>
-            <form class=" front-total">
-                <p>SHIPPING</p> <select>
-                    <option class="text-muted">J&T Express</option>
-                </select>
+<div class=" front-total ">
                 <p>GIVE CODE</p> <input id="code" placeholder="Enter your code">
             <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                <div class="col">TOTAL PRICE</div>
-                <div class="col text-right"><span class="simpleCart_total"></span></div>
-            </div> <button class="btn">CHECKOUT</button>
+
+            </div> <button data-fancybox="checkout" data-src="#checkout" href="javascript:;" class="btn">CHECKOUT</button>
+
+<div id="checkout" style="display: none; width: 100%; max-width: 660px;">
+            <form id="whatsapp-order" class="data-form validate-form">
+<input class="order" id="AdminToko" type="hidden"/>
+        <h4 class="mb-3">
+            Checkout!
+        </h4>
+  <label>Nama Lengkap</label>
+  <input type="text" id="nama" class="nama wajib" placeholder="Nama Lengkap">
+
+  <label>No. Whatsapp</label>
+  <input type="number" id="nomor" placeholder="No. Whatsapp" class="nomor wajib" style="-webkit-appearance:unset;">
+<label>SHIPPING</label>
+ <select class="informasi wajib">
+    <option class="text-muted" value="J%26T Express">J&T Express</option>
+    <option class="text-muted" value="JNE Express">JNE Express</option>
+    <option class="text-muted" value="*Grab Express">*GrabExpress</option>
+    <option class="text-muted" value="*GoSend">*GoSend</option>
+  </select>
+
+  <label>Alamat Pengiriman</label>
+  <input type="text" id="alamat" class="alamat wajib" name="Street" placeholder="Alamat Rumah">
+  <input type="text" id="kota" class="kota wajib" name="City" placeholder="Kota">
+  <input type="text" id="provinsi" class="provinsi wajib" name="State" placeholder="Provinsi">
+  <input type="text" id="kodepos" class="kodepos wajib" name="Zip Code" placeholder="Kode Pos"><div class="cart-button">
+            <a class="button order" type="button" class="btn btn-primary"  id="order" style="float:left;">Send Order</a>
+      <div id="recaptcha" class="g-recaptcha"
+          data-sitekey="6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7"
+          data-callback="onSubmit"
+          data-size="invisible"></div>
+    <script>onload();</script>
+</div></div>
             </form>
+</div>
 </div>
 
   </div>
@@ -382,6 +447,8 @@ a:hover {
 
     
 
+    
+      <script async src="/js/form-order.js"></script>
     
 
     
