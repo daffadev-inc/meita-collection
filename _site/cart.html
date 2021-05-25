@@ -9,8 +9,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="Web Developer from Somewhere">
-    <meta property="og:description" content="Web Developer from Somewhere" />
+    <meta name="description" content="Koleksi Fashion Berkualitas">
+    <meta property="og:description" content="Koleksi Fashion Berkualitas" />
     
     <meta name="author" content="Meita Collection" />
 
@@ -26,7 +26,7 @@
 <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
-<link rel="alternate" type="application/rss+xml" title="Meita Collection - Web Developer from Somewhere" href="/feed.xml" />
+<link rel="alternate" type="application/rss+xml" title="Meita Collection - Koleksi Fashion Berkualitas" href="/feed.xml" />
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
@@ -40,7 +40,7 @@
 
           <div class="site-info">
             <h1 class="site-name"><a href="/">Meita Collection</a></h1>
-            <p class="site-description">Web Developer from Somewhere</p>
+            <p class="site-description">Koleksi Fashion Berkualitas</p>
           </div>
 
           <nav>
@@ -85,6 +85,8 @@ body {
 .title {
     margin-bottom: 5vh;
     padding-top: 3.5vh;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .card {
@@ -174,6 +176,7 @@ img {
 
 .back-to-shop {
     margin-top: 4.5rem;
+    padding: 15px;
 }
 
 h5 {
@@ -253,7 +256,16 @@ a:hover {
 .item-thumb {
     margin-right: 5px;
 }
+.grid {
+    padding-top: 91px;
+    padding-bottom: 21px;
+}
 
+@media(max-width:767px) {
+.grid {
+    padding-top: 0px;}
+}
+.masthead{display:none;}
 .keranjang.dekstop{position:relative;width:60px;text-align:left;padding:5px 0;-webkit-box-ordinal-group:3;-ms-flex-order:3;order:3;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
 .notif-tambah-product{width:255px;position:absolute;z-index:99;font-size:14px;right:-10px;background:#00b35e;padding:10px 20px;opacity:1;display:none;color:#fff;top:65px;border-radius:15px;-webkit-box-shadow:0 2px 5px 0 rgba(56,56,56,.49);box-shadow:0 2px 5px 0 rgba(56,56,56,.49);}
 .keranjang .simpleCart_quantity{width:20px;height:20px;background:#ff0000;position:absolute;border-radius:100%;color:#ffffff;text-align:center;line-height:20px;font-size:12px;z-index:3}
@@ -313,7 +325,7 @@ a:hover {
     <div class="simpleCart_items"></div>
 </div>
             </div>
-            <div class="back-to-shop"><span class="text-muted" onclick="history.back();">&leftarrow; Back to shop</span></div>
+            <div class="back-to-shop"><a class="text-muted" onclick="history.back();">&leftarrow; Back to shop</a></div>
         </div>
         <div class="col-md-4 summary">
             <div>
@@ -324,7 +336,7 @@ a:hover {
                 <div class="col" style="padding-left:0;"><span class="simpleCart_quantity"></span></div>
                 <div class="col text-right"><span class="simpleCart_total"></span></div>
             </div>
-            <form>
+            <form class=" front-total">
                 <p>SHIPPING</p> <select>
                     <option class="text-muted">J&T Express</option>
                 </select>
@@ -334,6 +346,7 @@ a:hover {
                 <div class="col text-right"><span class="simpleCart_total"></span></div>
             </div> <button class="btn">CHECKOUT</button>
             </form>
+</div>
 
   </div>
 </article>

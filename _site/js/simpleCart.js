@@ -19,7 +19,7 @@ function formatBerat(angka) {
 };
 
 var cart_empty = '<div class="front-total" style="display:none;"></div>';
-var cart_kosong = '<div class="empty-cart" style="margin-top:35px;"><center><i class="fa fa-shopping-basket" style="font-size:115px;"></i><span class="center"><br /><p />Keranjang Belanja Kosong</span></div></center>';
+var cart_kosong = '<div class="empty-cart" style="margin-top:45px;"><center><i class="fa fa-shopping-basket" style="font-size:115px;"></i><span class="center"><br /><p />Keranjang Belanja Kosong</span></div></center>';
 var tombolMinus = '<i class="fa fa-minus-circle"></i>';
 var tombolPlus = '<i class="fa fa-plus-circle"></i>';
 var tombolRemove = '<i class="fa fa-trash"></i>';
