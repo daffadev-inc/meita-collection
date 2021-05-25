@@ -25,6 +25,7 @@ body {
   background: #ddd;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
+  text-decoration:none;
 }
 
 .container {
@@ -77,6 +78,7 @@ a {
 	cursor: pointer;
   &:hover, &:active {
     color: $blue;
+  text-decoration: none;
   }
 }
 

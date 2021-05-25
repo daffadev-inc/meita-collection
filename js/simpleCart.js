@@ -557,8 +557,8 @@ var tombolRemove = '<i class="fa fa-trash"></i>';
                 color: function (item, column) {
                     return "<span class='item_color' data-warna='" + item.get(column.attr) + "'>Warna " + [item.get(column.attr)] + "</span>";
                 },
-                tali: function (item, column) {
-                    return "<span class='item_tali' data-tali='" + item.get(column.attr) + "'>Jenis " + [item.get(column.attr)] + "</span>";
+                model: function (item, column) {
+                    return "<span class='item_model' data-model='" + item.get(column.attr) + "'>Jenis " + [item.get(column.attr)] + "</span>";
                 },
                 link: function (item, column) {
                     return [item.get(column.attr)];
@@ -914,7 +914,7 @@ var tombolRemove = '<i class="fa fa-trash"></i>';
                         data["item_quantity_" + counter] = item.quantity();
                         data["item_price_" + counter] = item.price();
                         data["item_color_" + counter] = item.color();
-                        data["item_tali_" + counter] = item.tali();
+                        data["item_model_" + counter] = item.model();
                         data["item_berat_" + counter] = item.berat();
 
                         // create array of extra options

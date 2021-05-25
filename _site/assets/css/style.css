@@ -71,6 +71,7 @@ body {
   background: #ddd;
   font: 18px/1.4 Helvetica, Arial, sans-serif;
   color: #333;
+  text-decoration: none;
 }
 
 .container {
@@ -127,6 +128,7 @@ a {
 
 a:hover, a:active {
   color: #4183C4;
+  text-decoration: none;
 }
 
 ul, ol {
