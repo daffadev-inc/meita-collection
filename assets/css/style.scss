@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background: #eee;
+  background: #ddd;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -110,9 +110,32 @@ strong, b {
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
+.img-product {
+  max-width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+
+  @include mobile {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;}
+}
+
+input {
+    overflow: visible;
+    text-align: center;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    width: 42px;
+    padding-top: 3px;
+    color: #1c1d1d;
+}
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
@@ -147,7 +170,6 @@ img {
 .mobile-show {
     display:none;
     visibility: hidden;
-    position: absolute;
     clip: rect(0, 0, 0, 0);
 
   @include mobile {
@@ -155,6 +177,38 @@ img {
     visibility: visible;}
 }
 
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.pill-cart {
+    background: #fff;
+    padding: 10px 0px 10px 15px;
+    border-radius: 25px;
+    box-shadow: 0 6px 20px 0 #00000030;
+  @include mobile {
+    background: none;
+    padding: 0;
+    border-radius: none;
+    box-shadow: none;
+    margin: -5px;
+    }
+}
+
+.floating-table {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    box-shadow: 0px -2px 10px 0 #00000030;
+}
 // Nicolas Gallagher's micro clearfix hack
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
@@ -317,7 +371,6 @@ nav {
     align-items: stretch;
     flex-wrap: nowrap;
     border-radius: 1rem;
-    overflow: hidden;
     box-shadow: 0 6px 20px 0 #00000030;
     max-height: 499.8px;
     background: #fff;
@@ -371,6 +424,9 @@ nav {
     max-height: 140px;
     height: 140px;
     overflow: auto;
+    box-shadow: inset 0px 10px 20px 3px #0000001c;
+    border-radius: 3px;
+    padding: 5px;
 }
 
 .style-picker div {
@@ -442,8 +498,9 @@ footer {
 
 .button {
     border-radius: 5px;
-    background: black;
+    background: #007bff;
     padding: 10px;
+    color: #fff;
 }
 
 .border-bottom {
@@ -456,14 +513,59 @@ footer {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
+    grid-gap: 10px;
 }
 select {
     border: 1px solid rgba(0, 0, 0, 0.137);
-    padding: 1.5vh 1vh;
+    padding: 1vh;
     outline: none;
-    width: 50%;
+    width: 100%;
     background-color: rgb(247, 247, 247);
+    border-radius: 25px;
 }
+
+.fa-minus-circle:before {
+    content: "\f056";
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 24px;
+    line-height: 20px;
+    color: rgb(0, 136, 13);
+    background: rgb(255, 255, 255);
+    padding: 0px;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.fa-plus-circle:before {
+    content: "\f055";
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 24px;
+    line-height: 20px;
+    color: rgb(0, 136, 13);
+    background: rgb(255, 255, 255);
+    padding: 0px;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tombol-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";

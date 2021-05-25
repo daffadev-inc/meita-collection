@@ -56,13 +56,14 @@
           </div>
 
           <nav>
+<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding: 1px 5px;border-radius: 100%;"></span></a>
   
-            <a href="/blogs/">Blogs</a>
+            <a href="/blogs">Blogs</a>
   
-            <a href="/products/">Products</a>
+            <a href="/products">Products</a>
   
-            <a href="/about/">About</a>
-  
+            <a href="/about">About</a>
+   
           </nav>
         </header>
       </div>
@@ -71,28 +72,29 @@
      <div class="container main grid flex">
         <div id="main" role="main">
                 <main class="content card single-product simpleCart_shelfItem" itemscope itemtype="http://schema.org/Product">
+<img class="display-none item_thumb" src="https://cf.shopee.co.id/file/09a49f974223ab7ee852275e9c0193e0"/>
 
         <section class="product-image">
           <div class="styles">
             
           		<div id="product-1" class="style" >
-        				<img alt="Mukena Garcella" src="https://cf.shopee.co.id/file/09a49f974223ab7ee852275e9c0193e0" itemprop="image">
+        				<img class="img-product" alt="Mukena Garcella" src="https://cf.shopee.co.id/file/09a49f974223ab7ee852275e9c0193e0" itemprop="image">
           		</div>
           	
           		<div id="product-2" class="style" style="display: none;">
-        				<img alt="Mukena Garcella" src="https://cf.shopee.co.id/file/6c3c76cf17cb55a7a4e6a1a3f138e2e8" itemprop="image">
+        				<img class="img-product" alt="Mukena Garcella" src="https://cf.shopee.co.id/file/6c3c76cf17cb55a7a4e6a1a3f138e2e8" itemprop="image">
           		</div>
           	
           		<div id="product-3" class="style" style="display: none;">
-        				<img alt="Mukena Garcella" src="https://cf.shopee.co.id/file/af3f66497bb1559c73619bdaaf38e539" itemprop="image">
+        				<img class="img-product" alt="Mukena Garcella" src="https://cf.shopee.co.id/file/af3f66497bb1559c73619bdaaf38e539" itemprop="image">
           		</div>
           	
           		<div id="product-4" class="style" style="display: none;">
-        				<img alt="Mukena Garcella" src="https://cf.shopee.co.id/file/f3e89f094e8c67e67f953680d14817d6" itemprop="image">
+        				<img class="img-product" alt="Mukena Garcella" src="https://cf.shopee.co.id/file/f3e89f094e8c67e67f953680d14817d6" itemprop="image">
           		</div>
           	
           		<div id="product-5" class="style" style="display: none;">
-        				<img alt="Mukena Garcella" src="https://cf.shopee.co.id/file/0e200dc5e3d7509e77a839e5f8e98717" itemprop="image">
+        				<img class="img-product" alt="Mukena Garcella" src="https://cf.shopee.co.id/file/0e200dc5e3d7509e77a839e5f8e98717" itemprop="image">
           		</div>
           	
           </div>
@@ -102,15 +104,46 @@
           <h2 class="entry-title item_name" itemprop="name">Mukena Garcella</h2>
   <div itemprop="aggregateRating"
     itemscope itemtype="https://schema.org/AggregateRating">
-   Rated <span itemprop="ratingValue">3.5</span>/5 | 
-   based on <span itemprop="reviewCount">11</span> customer reviews
+   <span class="iconify" data-icon="mdi:star" data-inline="false" style="vertical-align:text-bottom;color:#ffc107;" data-width="24px" data-height="24px"></span><span itemprop="ratingValue">5.0</span> | at <span itemprop="reviewCount">80</span> customer reviews
   </div>
 <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-          <span itemprop="priceCurrency" content="USD">IDR</span>
+          <span itemprop="priceCurrency" content="IDR">IDR</span>
           <span itemprop="price" content="185.000" class="item_price">185.000<span>
   </div>
     <link itemprop="availability" href="https://schema.org/InStock" />In stock
 <div class="border-bottom"></div>
+<p/>
+        	<div class="style-picker">
+            <span class="margin-bottom-0">Color:</span>
+            
+              <div id="product-1" class="item_color" style="background-color: #ba2342"><span class="display-none">Marun</span></div>
+            
+              <div id="product-2" style="background-color: #4a5265"><span class="display-none">Navi</span></div>
+            
+              <div id="product-3" style="background-color: #000"><span class="display-none">Hitam</span></div>
+            
+              <div id="product-4" style="background-color: #b48c69"><span class="display-none">Coksu</span></div>
+            
+              <div id="product-5" style="background-color: #023439"><span class="display-none">Hijau</span></div>
+            
+        	</div>
+<div class="selecting">
+          <span class="mobile-hide">Model:</span>
+          <select class="item_tali">
+            
+              <option value="Tali Ikat"> Tali Ikat </option>
+            
+          </select>
+<div class="input-group plus-minus-input" id="input_div">
+              <button class="btn btn-min btn-number" id="minus" onclick="minus()">
+                <i class="fa fa-minus-circle" aria-hidden="true"></i>
+              </button>
+          <input type="text" id="count" class="input-group-field item_Quantity" value="1" min="1" max="100" disabled/>
+              <button class="btn btn-plus btn-number" id="plus" onclick="plus()">
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i>
+              </button>
+      </div>
+</div>
 <p/>
   <div class="description" itemprop="description"  id="description">
           <h2 id="material-">Material :</h2>
@@ -144,42 +177,17 @@
 
 </div>
 <p/>
-        	<div class="style-picker">
-            <span class="margin-bottom-0">Color:</span>
-            
-              <div id="product-1" class="item_color" style="background-color: #ba2342"><span class="display-none">Marun</span></div>
-            
-              <div id="product-2" style="background-color: #4a5265"><span class="display-none">Navi</span></div>
-            
-              <div id="product-3" style="background-color: #000"><span class="display-none">Hitam</span></div>
-            
-              <div id="product-4" style="background-color: #b48c69"><span class="display-none">Coksu</span></div>
-            
-              <div id="product-5" style="background-color: #023439"><span class="display-none">Hijau</span></div>
-            
-        	</div>
-<div class="selecting">
-          <span class="margin-bottom-0">Model:</span>
-          <select class="item_tali">
-            
-              <option value="Tali Ikat"> Tali Ikat </option>
-            
-          </select>
-          <span class="margin-bottom-0">Quantity:</span>
-          <select class="item_Quantity">
-            <option value="1"> 1 </option>
-            <option value="2"> 2 </option>
-            <option value="3"> 3 </option>
-            <option value="4"> 4 </option>
-            <option value="5"> 5 </option>
-            <option value="6"> 6 </option>
-            <option value="7"> 7 </option>
-            <option value="8"> 8 </option>
-          </select>
-</div>
-<p/>
-          <a id="item_add" class="item_add button" href="javascript:;"> Add to Cart </a></span>
+<div class="mobile-hide">
+          <a id="item_add" class="item_add button" href="javascript:;" style="float: right;"> Add to Cart </a></div>
         </section>
+<div class="mobile-show">
+<div class="floating-table">
+<div class="tombol-2">
+<div class="ngumpul"><a href="/cart/" id="cart-menu">
+<span class="iconify" data-icon="uil:shopping-bag" data-inline="false" style="color: #4183C4;" data-width="50px" data-height="50px"></span><span class="simpleCart_quantity" style="position: absolute;left: 40px;top: 10px;background: red;padding: 0px 6px;border-radius: 100%;color: #fff;font-size: 14px;font-weight: bold;"></span></a>
+<span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="50px" data-height="50px"></span></div>
+          <a id="item_add" class="item_add button" href="javascript:;" style="float: right;"> Add to Cart </a></div></div>
+</div>
 
       </main>
 
@@ -193,6 +201,20 @@
         </footer>
     </div>
 
+<script>
+    var count = 1;
+    var countEl = document.getElementById("count");
+    function plus(){
+        count++;
+        countEl.value = count;
+    }
+    function minus(){
+      if (count > 1) {
+        count--;
+        countEl.value = count;
+      }  
+    }
+</script>
     <script src="/js/jquery-2.2.4.min.js"></script>
     <script src="/js/simpleCart.js"></script>
     <script async src="/js/main.js"></script>

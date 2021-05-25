@@ -68,7 +68,7 @@ html {
 }
 
 body {
-  background: #eee;
+  background: #ddd;
   font: 18px/1.4 Helvetica, Arial, sans-serif;
   color: #333;
 }
@@ -162,6 +162,33 @@ img {
   max-width: 100%;
 }
 
+.img-product {
+  max-width: 100%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .img-product {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+  }
+}
+
+input {
+  overflow: visible;
+  text-align: center;
+  border: none;
+  background: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  width: 42px;
+  padding-top: 3px;
+  color: #1c1d1d;
+}
+
 .gmnoprint img {
   max-width: none;
 }
@@ -198,7 +225,6 @@ img {
 .mobile-show {
   display: none;
   visibility: hidden;
-  position: absolute;
   clip: rect(0, 0, 0, 0);
 }
 
@@ -207,6 +233,42 @@ img {
     display: block;
     visibility: visible;
   }
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.pill-cart {
+  background: #fff;
+  padding: 10px 0px 10px 15px;
+  border-radius: 25px;
+  box-shadow: 0 6px 20px 0 #00000030;
+}
+
+@media screen and (max-width: 800px) {
+  .pill-cart {
+    background: none;
+    padding: 0;
+    border-radius: none;
+    box-shadow: none;
+    margin: -5px;
+  }
+}
+
+.floating-table {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  padding: 10px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0px -2px 10px 0 #00000030;
 }
 
 .clearfix:before,
@@ -386,7 +448,6 @@ nav a {
   align-items: stretch;
   flex-wrap: nowrap;
   border-radius: 1rem;
-  overflow: hidden;
   box-shadow: 0 6px 20px 0 #00000030;
   max-height: 499.8px;
   background: #fff;
@@ -453,6 +514,9 @@ nav a {
   max-height: 140px;
   height: 140px;
   overflow: auto;
+  box-shadow: inset 0px 10px 20px 3px #0000001c;
+  border-radius: 3px;
+  padding: 5px;
 }
 
 .style-picker div {
@@ -525,8 +589,9 @@ footer {
 
 .button {
   border-radius: 5px;
-  background: black;
+  background: #007bff;
   padding: 10px;
+  color: #fff;
 }
 
 .border-bottom {
@@ -540,14 +605,59 @@ footer {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
+  grid-gap: 10px;
 }
 
 select {
   border: 1px solid rgba(0, 0, 0, 0.137);
-  padding: 1.5vh 1vh;
+  padding: 1vh;
   outline: none;
-  width: 50%;
+  width: 100%;
   background-color: #f7f7f7;
+  border-radius: 25px;
+}
+
+.fa-minus-circle:before {
+  content: "\f056";
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 24px;
+  line-height: 20px;
+  color: #00880d;
+  background: white;
+  padding: 0px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fa-plus-circle:before {
+  content: "\f055";
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 24px;
+  line-height: 20px;
+  color: #00880d;
+  background: white;
+  padding: 0px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tombol-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
 .highlight {

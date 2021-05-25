@@ -44,13 +44,14 @@
           </div>
 
           <nav>
+<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding: 1px 5px;border-radius: 100%;"></span></a>
   
-            <a href="/blogs/">Blogs</a>
+            <a href="/blogs">Blogs</a>
   
-            <a href="/products/">Products</a>
+            <a href="/products">Products</a>
   
-            <a href="/about/">About</a>
-  
+            <a href="/about">About</a>
+   
           </nav>
         </header>
       </div>
@@ -59,8 +60,6 @@
      <div class="container main grid flex">
         <div id="main" role="main">
           <article class="page">
-
-  <h1>Checkout</h1>
 
   <div class="entry">
     <style>
@@ -118,6 +117,20 @@
         </footer>
     </div>
 
+<script>
+    var count = 1;
+    var countEl = document.getElementById("count");
+    function plus(){
+        count++;
+        countEl.value = count;
+    }
+    function minus(){
+      if (count > 1) {
+        count--;
+        countEl.value = count;
+      }  
+    }
+</script>
     <script src="/js/jquery-2.2.4.min.js"></script>
     <script src="/js/simpleCart.js"></script>
     <script async src="/js/main.js"></script>

@@ -4,12 +4,13 @@ layout: default
 
 
       <main class="content card single-product simpleCart_shelfItem" itemscope itemtype="http://schema.org/Product">
+<img class="display-none item_thumb" src="{{ page.featured_image_path }}"/>
 
         <section class="product-image">
           <div class="styles">
             {% for style in page.styles %}
           		<div id="product-{{ forloop.index }}" class="style" {% unless forloop.first %}style="display: none;"{% endunless %}>
-        				<img alt="{{ page.title }}" src="{{ style.image_path }}" itemprop="image">
+        				<img class="img-product" alt="{{ page.title }}" src="{{ style.image_path }}" itemprop="image">
           		</div>
           	{% endfor %}
           </div>
@@ -19,19 +20,14 @@ layout: default
           <h2 class="entry-title item_name" itemprop="name">{{ page.title }}</h2>
   <div itemprop="aggregateRating"
     itemscope itemtype="https://schema.org/AggregateRating">
-   Rated <span itemprop="ratingValue">3.5</span>/5 | 
-   based on <span itemprop="reviewCount">11</span> customer reviews
+   <span class="iconify" data-icon="mdi:star" data-inline="false" style="vertical-align:text-bottom;color:#ffc107;" data-width="24px" data-height="24px"></span><span itemprop="ratingValue">{{page.rating}}</span> | at <span itemprop="reviewCount">{{page.rC}}</span> customer reviews
   </div>
 <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-          <span itemprop="priceCurrency" content="USD">IDR</span>
+          <span itemprop="priceCurrency" content="IDR">IDR</span>
           <span itemprop="price" content="{{ page.price }}" class="item_price">{{ page.price }}<span>
   </div>
     <link itemprop="availability" href="https://schema.org/InStock" />In stock
 <div class="border-bottom"></div>
-<p/>
-  <div class="description" itemprop="description"  id="description">
-          {{ content }}
-</div>
 <p/>
         	<div class="style-picker">
             <span class="margin-bottom-0">Color:</span>
@@ -40,26 +36,37 @@ layout: default
             {% endfor %}
         	</div>
 <div class="selecting">
-          <span class="margin-bottom-0">Model:</span>
+          <span class="mobile-hide">Model:</span>
           <select class="item_tali">
             {% for model in page.tali %}
               <option value="{{ model }}"> {{ model }} </option>
             {% endfor %}
           </select>
-          <span class="margin-bottom-0">Quantity:</span>
-          <select class="item_Quantity">
-            <option value="1"> 1 </option>
-            <option value="2"> 2 </option>
-            <option value="3"> 3 </option>
-            <option value="4"> 4 </option>
-            <option value="5"> 5 </option>
-            <option value="6"> 6 </option>
-            <option value="7"> 7 </option>
-            <option value="8"> 8 </option>
-          </select>
+<div class="input-group plus-minus-input" id="input_div">
+              <button class="btn btn-min btn-number" id="minus" onclick="minus()">
+                <i class="fa fa-minus-circle" aria-hidden="true"></i>
+              </button>
+          <input type="text" id="count" class="input-group-field item_Quantity" value="1" min="1" max="100" disabled/>
+              <button class="btn btn-plus btn-number" id="plus" onclick="plus()">
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i>
+              </button>
+      </div>
 </div>
 <p/>
-          <a id="item_add" class="item_add button" href="javascript:;"> Add to Cart </a></span>
+  <div class="description" itemprop="description"  id="description">
+          {{ content }}
+</div>
+<p/>
+<div class="mobile-hide">
+          <a id="item_add" class="item_add button" href="javascript:;" style="float: right;"> Add to Cart </a></div>
         </section>
+<div class="mobile-show">
+<div class="floating-table">
+<div class="tombol-2">
+<div class="ngumpul"><a href="/cart/" id="cart-menu">
+<span class="iconify" data-icon="uil:shopping-bag" data-inline="false" style="color: #4183C4;" data-width="50px" data-height="50px"></span><span class="simpleCart_quantity" style="position: absolute;left: 40px;top: 10px;background: red;padding: 0px 6px;border-radius: 100%;color: #fff;font-size: 14px;font-weight: bold;"></span></a>
+<span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="50px" data-height="50px"></span></div>
+          <a id="item_add" class="item_add button" href="javascript:;" style="float: right;"> Add to Cart </a></div></div>
+</div>
 
       </main>
