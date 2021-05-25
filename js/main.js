@@ -9,6 +9,7 @@ simpleCart({
 { attr: "quantity", label: 'Jumlah', view: "jumlah" },
 { view: "increment", label: false },
 { attr: "total", label: false, view: "currency" },
+{ attr: "link", label: false, view: "link" },
 ],
 	currency: "IDR",
 });
