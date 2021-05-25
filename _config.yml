@@ -36,9 +36,10 @@ collections:
   products:
     output: true
 
+
 defaults:
 - scope:
-    type: posts
+    type: blogs
   values:
     layout: post
 - scope:

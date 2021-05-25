@@ -127,7 +127,7 @@ function WhatsApp() {
 					tops = Number((screen.height / 2) - (h / 2)),
 					popupWindow = window.open(this.href, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=1, copyhistory=no, width=' + w + ', height=' + h + ', top=' + tops + ', left=' + left);
                 popupWindow.focus();
-localStorage.removeItem('simpleCart_items');
+                localStorage.removeItem('simpleCart_items');
 				return false;
 			}
 		}//]]>

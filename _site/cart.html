@@ -56,7 +56,7 @@
         alert("Kamu Harus mengisi semua kolom.");
       }
      {
-        grecaptcha.execute('checkout');
+        grecaptcha.execute('recaptcha');
       }
     }
 
@@ -80,7 +80,7 @@
           </div>
 
           <nav>
-<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding: 1px 5px;border-radius: 100%;"></span></a>
+<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding:6px;border-radius:5px;"></span></a>
   
             <a href="/blogs">Blogs</a>
   
@@ -128,7 +128,7 @@ body {
 .card {
     margin: auto;
     max-width: 950px;
-    width: 90%;
+    width: 100%;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
     border: transparent
@@ -136,7 +136,7 @@ body {
 
 @media(max-width:767px) {
     .card {
-        margin: 3vh auto
+        margin: 3vh 0vh;
     }
 }
 
@@ -407,9 +407,9 @@ a:hover {
           data-sitekey="6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7"
           data-callback="onSubmit"
           data-size="invisible"></div>
-    <script>onload();</script>
 </div></div>
             </form>
+    <script>onload();</script>
 </div>
 </div>
 

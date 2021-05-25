@@ -34,7 +34,7 @@ body {
 .card {
     margin: auto;
     max-width: 950px;
-    width: 90%;
+    width: 100%;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
     border: transparent
@@ -42,7 +42,7 @@ body {
 
 @media(max-width:767px) {
     .card {
-        margin: 3vh auto
+        margin: 3vh 0vh;
     }
 }
 
@@ -313,8 +313,8 @@ a:hover {
           data-sitekey="{{site.reCAPTCHA-key}}"
           data-callback="onSubmit"
           data-size="invisible"></div>
-    <script>onload();</script>
 </div></div>
             </form>
+    <script>onload();</script>
 </div>
 </div>
