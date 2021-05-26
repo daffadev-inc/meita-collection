@@ -270,7 +270,6 @@ a:hover {
             <div class="back-to-shop"><a class="text-muted" onclick="history.back();">&leftarrow; Back to shop</a></div>
         </div>
         <div class="col-md-4 summary">
-<form id="checkout-form">
 <div>
                 <h5><b>Summary</b></h5>
             </div>
@@ -284,14 +283,11 @@ a:hover {
             <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
 
             </div>
-<button class="btn g-recaptcha" 
-        data-sitekey="{{site.reCAPTCHA-key}}" 
-        data-callback='onSubmit' data-fancybox="checkout" data-src="#checkout" href="javascript:;" data-action='submit'>CHECKOUT</button>
-</form>
-    </script>
+<button class="btn" data-fancybox="checkout" data-src="#checkout" href="javascript:;" data-action='submit'>CHECKOUT</button>
+
 <div id="checkout" style="display: none; width: 100%; max-width: 660px;">
 <form id="whatsapp-order" class="data-form validate-form">
-<input class="order" id="AdminToko" type="hidden"/>
+<input class="order" id="AdminToko" type="hidden">
         <h4 class="mb-3">
             Checkout!
         </h4>
@@ -314,6 +310,11 @@ a:hover {
   <input type="text" id="provinsi" class="provinsi wajib" name="State" placeholder="Provinsi">
   <input type="text" id="kodepos" class="kodepos wajib" name="Zip Code" placeholder="Kode Pos"><div class="cart-button">
             <a class="button order" type="submit" class="btn btn-primary"  id="whatsapp-order" style="float:left;">Send Order</a>
+<div class="g-recaptcha" 
+        data-sitekey="{{site.reCAPTCHA-key}}" 
+        data-callback='onSubmit' 
+        data-action='submit'
+      data-size="invisible"></div>
 </div></div>
             </form>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
