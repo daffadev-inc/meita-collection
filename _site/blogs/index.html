@@ -30,19 +30,11 @@
 <script src="/assets/fancybox/dist/jquery.fancybox.min.js"></script>
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <script type="text/javascript">
-      var verifyCallback = function(response) {
-        alert(response);
-      };
-      var widgetId1;
-      var onloadCallback = function() {
-        widgetId1 = grecaptcha.render('checkout', {
-          'sitekey' : '6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7',
-          'theme' : 'light'
-        });
-      };
-    </script>
+ <script>
+   function onSubmit(token) {
+     document.getElementById("checkout-form").submit();
+   }
+ </script>
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
