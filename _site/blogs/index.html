@@ -30,38 +30,19 @@
 <script src="/assets/fancybox/dist/jquery.fancybox.min.js"></script>
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-    function onSubmit(token) {
-      alert('Terimakasih ' + document.getElementById('order').value);
-    }
 
-    function validate(event) {
-      event.preventDefault();
-      if (!document.getElementById('nama').value) {
-        alert("Kamu Harus mengisi semua kolom.");
-      } else if (!document.getElementById('nomor').value) {
-        alert("Kamu Harus mengisi semua kolom.");
-      } else if (!document.getElementById('kurir').value) {
-        alert("Kamu Harus mengisi semua kolom.");
-      } else if (!document.getElementById('alamat').value) {
-        alert("Kamu Harus mengisi semua kolom.");
-      } else if (!document.getElementById('kota').value) {
-        alert("Kamu Harus mengisi semua kolom.");
-      } else if (!document.getElementById('provinsi').value) {
-        alert("Kamu Harus mengisi semua kolom.");
-      } else if (!document.getElementById('kodepos').value) {
-        alert("Kamu Harus mengisi semua kolom.");
-      }
-     {
-        grecaptcha.execute('recaptcha');
-      }
-    }
-
-    function onload() {
-      var element = document.getElementById('order');
-      element.onclick = validate;
-    }
-  </script>
+    <script type="text/javascript">
+      var verifyCallback = function(response) {
+        alert(response);
+      };
+      var widgetId1;
+      var onloadCallback = function() {
+        widgetId1 = grecaptcha.render('checkout', {
+          'sitekey' : '6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7',
+          'theme' : 'light'
+        });
+      };
+    </script>
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
