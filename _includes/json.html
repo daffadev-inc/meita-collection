@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Product",
+  "productID":"Produk_{{page.noID}}",
+  "name":"{{page.title}}",
+  "description":"{{page.description}}",
+  "url":"{{site.url}}{{page.url}}",
+  "image":"{{page.featured_image_path}}",
+  "brand":"MC-Brand",
+  "offers": [
+    {
+      "@type": "Offer",
+      "price": "{{page.price}}",
+      "priceCurrency": "IDR",
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/InStock"
+    }
+  ],
+  "additionalProperty": [{
+    "@type": "PropertyValue",
+    "propertyID": "{{page.mpn}}",
+    "value": "{{page.sku}}"
+  }]
+}
+</script>
