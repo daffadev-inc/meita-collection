@@ -248,7 +248,7 @@ input, textarea {
 }
 
 @media screen and (max-width: 800px) {
-  .back-to-shop, .wrapper-footer {
+  .back-to-shop {
     margin-top: 0 !important;
   }
 }
@@ -618,8 +618,27 @@ nav a {
   font-size: 15px;
 }
 
+@media screen and (max-width: 800px) {
+  .sticky-head {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sticky {
+    position: fixed;
+    z-index: 9999;
+    padding: 15px 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #f8f8f8;
+    box-shadow: 0px 3px 10px -3px #333;
+  }
+}
+
 .wrapper-footer {
-  margin-top: 50px;
+  margin-top: 15px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: #eee;
@@ -628,7 +647,6 @@ nav a {
 
 footer {
   width: 100%;
-  padding: 20px 30px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;

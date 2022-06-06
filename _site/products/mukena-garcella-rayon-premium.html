@@ -29,6 +29,15 @@
     <meta property="og:title" content="Mukena Garcella" />
     <meta property="twitter:title" content="Mukena Garcella" />
     
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
 
     <!--[if lt IE 9]>
@@ -67,14 +76,14 @@
     
         <header class="masthead clearfix">
           <a href="/" class="site-avatar"><img src="/images/logo/MC.webp" /></a>
-
           <div class="site-info">
             <h1 class="site-name"><a href="/"><span style="color: #f09432;">Meita</span> <span style="color: #124cc8;">Collection</span></a></h1>
             <p class="site-description">Koleksi Fashion Berkualitas</p>
           </div>
 
+<div class="sticky-head">
           <nav>
-<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;font-weight: 700;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding: 6px 10px;border-radius: 50px;"></span></a>
+<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;font-weight: 700;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding: 3px 6px;border-radius: 50px;"></span></a>
   
             <a href="/blogs" active>Blogs</a>
   
@@ -83,18 +92,11 @@
             <a href="/about" active>About</a>
    
           </nav>
+</div>
         </header>
       </div>
 </div>
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
      <div class="container main grid flex">
-        <div id="url" style="display:none">NdanG</div>
         <div id="main" role="main">
                 <main class="content card single-product simpleCart_shelfItem" itemscope itemtype="http://schema.org/Product">
 <img class="display-none item_thumb" src="https://cf.shopee.co.id/file/09a49f974223ab7ee852275e9c0193e0"/>
@@ -207,17 +209,17 @@
 <div class="ngarumpul">
 <a type="button" data-fancybox="" data-src="#whatsapp" href="javascript:;">
 <span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="45px" data-height="45px"></span></a>
-          <button id="item_add" class="btn item_add button" href="javascript:;" style="float:right;display:block!important;" onclick="myFunction()"> Add to Cart </button></div>
+          <button id="item_add" class="btn item_add button" href="javascript:;" style="float:right;display:block!important;" onclick="myCart()"> Add to Cart </button></div>
 </div>
         </section>
 <div class="mobile-show">
 <div class="floating-table">
 <div class="tombol-2">
 <div class="ngumpul"><a href="/cart/" id="cart-menu">
-<span class="iconify" data-icon="uil:shopping-bag" data-inline="false" style="color: #4183C4;" data-width="45px" data-height="45px"></span><span class="simpleCart_quantity" style="position: absolute;left: 40px;top: 10px;background: red;padding:2px 4px;border-radius:5px;color: #fff;font-size: 14px;font-weight: bold;"></span></a>
+<span class="iconify" data-icon="uil:shopping-bag" data-inline="false" style="color: #4183C4;" data-width="45px" data-height="45px"></span><span class="simpleCart_quantity" style="position: absolute;left: 40px;top: 10px;background: red;padding:1px 6px;border-radius:25px;color: #fff;font-size: 14px;font-weight: bold;"></span></a>
 <a type="button" data-fancybox="" data-src="#whatsapp" href="javascript:;">
 <span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="45px" data-height="45px"></span></a></div>
-          <a id="item_add" class="btn item_add button" href="javascript:;" style="float: right;"> Masuk Keranjang </a></div></div>
+          <a id="item_add" class="btn item_add button" href="javascript:;" style="float: right;" onclick="myCart()"> Masuk Keranjang </a></div></div>
 </div>
 <form action="" method="post" style="display:none;width:100%;max-width:360px;margin:0px;align-items:stretch;" validate-form' id='whatsapp'>
 <input class='pertanyaan' id='nomorAdmin' type='hidden'/>
@@ -240,11 +242,26 @@
 
     <div class="wrapper-footer">
         <footer class="footer">
-          <div class="linklist"><a href="https://meita-collection.netlify.app">Meita Collection</a> &copy; 2022</div> <div class="popWin"> Developed with ❤️ by <a href="https://daffadev.my.id/" itemprop="copyrightHolder" itemscope="" itemtype="http://schema.org/Person"><b itemprop="name" id="footer">NdanG</b></a></a></div>
+          <div class="linklist"><a style="color:#007bff!important" href="https://meita-collection.netlify.app">Meita Collection</a> &copy; 2022</div> <div class="popWin"> Developed with ❤️ by <a href="https://daffadev.my.id/" itemprop="copyrightHolder" itemscope="" itemtype="http://schema.org/Person"><b style="color:#007bff!important" itemprop="name" id="footer">NdanG</b></a></a></div>
 
         </footer>
     </div>
+<script>
+$window = $(window);
+$window.scroll(function() {
+  $scroll_position = $window.scrollTop();
+    if ($scroll_position > 150) { // if body is scrolled down by 300 pixels
+        $('.sticky-head').addClass('sticky');
 
+        // to get rid of jerk
+        header_height = $('.sticky-head').innerHeight();
+        $('body').css('padding-top' , header_height);
+    } else {
+        $('body').css('padding-top' , '0');
+        $('.sticky-head').removeClass('sticky');
+    }
+ });
+</script>
 <script>
     var count = 1;
     var countEl = document.getElementById("count");
@@ -258,24 +275,19 @@
         countEl.value = count;
       }  
     }
-</script><script>
+</script>
+<script>
 $(document).ready(function(){
 $(".preloader").fadeOut();
 })
 </script>
+    
 <script>
-$(document).ready(function(){
-    $( ".pill-cart" ).hover(function() {
-           $('.modal').modal({
-        show: true
-    });
-  });  
-});
-</script><script>
-function myFunction() {
-  alert("Mukena Garcella Berhasil Masuk Ke Keranjang...");
+function myCart() {
+  alert("pilihan kamu, Mukena Garcella");
 }
 </script>
+    
     <script src="/js/jquery-2.2.4.min.js"></script>
     <script src="/js/simpleCart.js"></script>
     <script async src="/js/main.js"></script>

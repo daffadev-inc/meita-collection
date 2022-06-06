@@ -192,7 +192,7 @@ input, textarea {
   @include mobile {
     margin-bottom:0!important;}
 }
-.back-to-shop, .wrapper-footer{
+.back-to-shop,{
   @include mobile {
     margin-top:0!important;}
 }
@@ -523,9 +523,23 @@ nav {
     font-size: 15px;
   }
 }
-
+.sticky-head{
+    @include mobile {
+    padding: 20px 30px;}
+}
+.sticky {
+    @include mobile {
+    position: fixed;
+    z-index: 9999;
+    padding: 15px 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #f8f8f8;
+    box-shadow: 0px 3px 10px -3px #333;}
+}
 .wrapper-footer {
-  margin-top: 50px;
+  margin-top: 15px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
@@ -534,7 +548,6 @@ nav {
 
 footer {
     width: 100%;
-    padding: 20px 30px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;

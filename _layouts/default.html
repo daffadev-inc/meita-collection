@@ -35,30 +35,23 @@
     {% endif %}
         <header class="masthead clearfix">
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
           <div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/"><span style="color: #f09432;">Meita</span> <span style="color: #124cc8;">Collection</span></a></h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
 
+<div class="sticky-head">
           <nav>
-<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;font-weight: 700;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding: 6px 10px;border-radius: 50px;"></span></a>
+<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;font-weight: 700;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding: 3px 6px;border-radius: 50px;"></span></a>
   {% for nav in site.data.navigation %}
             <a href="{{ nav.url }}" active>{{ nav.title }}</a>
   {% endfor %} 
           </nav>
+</div>
         </header>
       </div>
 </div>
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
      <div class="container main grid flex">
-        <div id="url" style="display:none">NdanG</div>
         <div id="main" role="main">
           {{ content }}
         </div>
@@ -69,7 +62,22 @@
           {% include footer.html %}
         </footer>
     </div>
+<script>
+$window = $(window);
+$window.scroll(function() {
+  $scroll_position = $window.scrollTop();
+    if ($scroll_position > 150) { // if body is scrolled down by 300 pixels
+        $('.sticky-head').addClass('sticky');
 
+        // to get rid of jerk
+        header_height = $('.sticky-head').innerHeight();
+        $('body').css('padding-top' , header_height);
+    } else {
+        $('body').css('padding-top' , '0');
+        $('.sticky-head').removeClass('sticky');
+    }
+ });
+</script>
 <script>
     var count = 1;
     var countEl = document.getElementById("count");
@@ -83,24 +91,19 @@
         countEl.value = count;
       }  
     }
-</script><script>
+</script>
+<script>
 $(document).ready(function(){
 $(".preloader").fadeOut();
 })
 </script>
+    {% if page.url contains '/products/' %}
 <script>
-$(document).ready(function(){
-    $( ".pill-cart" ).hover(function() {
-           $('.modal').modal({
-        show: true
-    });
-  });  
-});
-</script><script>
-function myFunction() {
-  alert("{{ page.title }} Berhasil Masuk Ke Keranjang...");
+function myCart() {
+  alert("pilihan kamu, {{page.title}}");
 }
 </script>
+    {% endif %}
     <script src="{{ site.baseurl }}/js/jquery-2.2.4.min.js"></script>
     <script src="{{ site.baseurl }}/js/simpleCart.js"></script>
     <script async src="{{ site.baseurl }}/js/main.js"></script>
