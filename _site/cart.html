@@ -7,6 +7,7 @@
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <meta name="facebook-domain-verification" content="falwpvxd7uwctfodyz7ury4g4x4opi" />
 
     
     <meta name="description" content="Koleksi Fashion Berkualitas">
@@ -18,6 +19,7 @@
     <meta property="og:title" content="Cart" />
     <meta property="twitter:title" content="Cart" />
     
+
 
     <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -38,35 +40,49 @@
      document.getElementById("whatsapp-order").submit();
    }
  </script>
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <!-- Created with Jekyll-->
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
+    <div class="preloader">
+  <div class="loading">
+    <img src="/images/loading.gif" width="80">
+    <p><b>Harap Tunggu</b></p>
+  </div>
+</div>
+
     <div class="wrapper-masthead">
     
         <header class="masthead clearfix">
-          <a href="/" class="site-avatar"><img src="/images/jekyll-logo.png" /></a>
+          <a href="/" class="site-avatar"><img src="/images/logo/MC.webp" /></a>
 
           <div class="site-info">
-            <h1 class="site-name"><a href="/">Meita Collection</a></h1>
+            <h1 class="site-name"><a href="/"><span style="color: #f09432;">Meita</span> <span style="color: #124cc8;">Collection</span></a></h1>
             <p class="site-description">Koleksi Fashion Berkualitas</p>
           </div>
 
           <nav>
-<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding:6px;border-radius:5px;"></span></a>
+<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;font-weight: 700;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding: 6px 10px;border-radius: 50px;"></span></a>
   
-            <a href="/blogs">Blogs</a>
+            <a href="/blogs" active>Blogs</a>
   
-            <a href="/products">Products</a>
+            <a href="/products" active>Products</a>
   
-            <a href="/about">About</a>
+            <a href="/about" active>About</a>
    
           </nav>
         </header>
       </div>
 </div>
-
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
      <div class="container main grid flex">
+        <div id="url" style="display:none">NdanG</div>
         <div id="main" role="main">
           <article class="page">
 
@@ -104,7 +120,8 @@ body {
     width: 100%;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
-    border: transparent
+    border: transparent;
+    min-height: 412px;
 }
 
 @media(max-width:767px) {
@@ -112,6 +129,8 @@ body {
         margin: 3vh 0vh;
     }
 }
+
+.wrapper-masthead{margin:0}
 
 .cart {
     background-color: #fff;
@@ -133,13 +152,15 @@ body {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 4vh;
-    color: rgb(65, 65, 65)
+    color: rgb(65, 65, 65);
+    min-height: 412px;
 }
 
 @media(max-width:767px) {
     .summary {
         border-top-right-radius: unset;
-        border-bottom-left-radius: 1rem
+        border-bottom-left-radius: 1rem;
+        min-height: auto;
     }
 }
 
@@ -266,8 +287,8 @@ a:hover {
     margin-right: 5px;
 }
 .grid {
-    padding-top: 91px;
-    padding-bottom: 21px;
+    padding-top: 75px;
+    padding-bottom: 25px;
 }
 
 @media(max-width:767px) {
@@ -320,7 +341,7 @@ a:hover {
 </style>
         <div class="card">
             <div class="row">
-                <div class=col-md-8 cart" style="padding: 0px!important;">
+                <div class="col-md-8 cart" style="padding: 0px!important;">
             <div class="title">
                 <div class="row">
                     <div class="col">
@@ -350,7 +371,7 @@ a:hover {
             <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
 
             </div>
-<button class="btn" data-fancybox="checkout" data-src="#checkout" href="javascript:;" data-action='submit'>CHECKOUT</button>
+<button class="btn cOut" data-fancybox="checkout" data-src="#checkout" href="javascript:;" data-action='submit'>CHECKOUT</button>
 
 <div id="checkout" style="display: none; width: 100%; max-width: 660px;">
 <form id="whatsapp-order" class="data-form validate-form">
@@ -385,7 +406,7 @@ a:hover {
 </div></div>
             </form>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
+        async defer></script>
 </div>
 </div>
 
@@ -397,7 +418,7 @@ a:hover {
 
     <div class="wrapper-footer">
         <footer class="footer">
-          <div class="linklist"><a href="">Meita Collection</a> &copy; 2021</div> <div class="popWin"> Developed with ❤️ by <a href="https://daffadev.my.id/" itemprop="copyrightHolder" itemscope="" itemtype="http://schema.org/Person"><b itemprop="name"> NdanG</b></a></a></div>
+          <div class="linklist"><a href="https://meita-collection.netlify.app">Meita Collection</a> &copy; 2022</div> <div class="popWin"> Developed with ❤️ by <a href="https://daffadev.my.id/" itemprop="copyrightHolder" itemscope="" itemtype="http://schema.org/Person"><b itemprop="name" id="footer">NdanG</b></a></a></div>
 
         </footer>
     </div>
@@ -415,6 +436,23 @@ a:hover {
         countEl.value = count;
       }  
     }
+</script><script>
+$(document).ready(function(){
+$(".preloader").fadeOut();
+})
+</script>
+<script>
+$(document).ready(function(){
+    $( ".pill-cart" ).hover(function() {
+           $('.modal').modal({
+        show: true
+    });
+  });  
+});
+</script><script>
+function myFunction() {
+  alert("Cart Berhasil Masuk Ke Keranjang...");
+}
 </script>
     <script src="/js/jquery-2.2.4.min.js"></script>
     <script src="/js/simpleCart.js"></script>

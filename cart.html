@@ -37,7 +37,8 @@ body {
     width: 100%;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
-    border: transparent
+    border: transparent;
+    min-height: 412px;
 }
 
 @media(max-width:767px) {
@@ -45,6 +46,8 @@ body {
         margin: 3vh 0vh;
     }
 }
+
+.wrapper-masthead{margin:0}
 
 .cart {
     background-color: #fff;
@@ -66,13 +69,15 @@ body {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 4vh;
-    color: rgb(65, 65, 65)
+    color: rgb(65, 65, 65);
+    min-height: 412px;
 }
 
 @media(max-width:767px) {
     .summary {
         border-top-right-radius: unset;
-        border-bottom-left-radius: 1rem
+        border-bottom-left-radius: 1rem;
+        min-height: auto;
     }
 }
 
@@ -199,8 +204,8 @@ a:hover {
     margin-right: 5px;
 }
 .grid {
-    padding-top: 91px;
-    padding-bottom: 21px;
+    padding-top: 75px;
+    padding-bottom: 25px;
 }
 
 @media(max-width:767px) {
@@ -253,7 +258,7 @@ a:hover {
 </style>
         <div class="card">
             <div class="row">
-                <div class=col-md-8 cart" style="padding: 0px!important;">
+                <div class="col-md-8 cart" style="padding: 0px!important;">
             <div class="title">
                 <div class="row">
                     <div class="col">
@@ -283,7 +288,7 @@ a:hover {
             <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
 
             </div>
-<button class="btn" data-fancybox="checkout" data-src="#checkout" href="javascript:;" data-action='submit'>CHECKOUT</button>
+<button class="btn cOut" data-fancybox="checkout" data-src="#checkout" href="javascript:;" data-action='submit'>CHECKOUT</button>
 
 <div id="checkout" style="display: none; width: 100%; max-width: 660px;">
 <form id="whatsapp-order" class="data-form validate-form">
@@ -318,6 +323,6 @@ a:hover {
 </div></div>
             </form>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
+        async defer></script>
 </div>
 </div>

@@ -67,8 +67,26 @@ html {
   display: none;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.preloader .loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font: 14px arial;
+}
+
 body {
-  background: #ddd;
+  background: #ddd3;
   font: 18px/1.4 Helvetica, Arial, sans-serif;
   color: #333;
   text-decoration: none;
@@ -121,7 +139,7 @@ p {
 }
 
 a {
-  color: #4183C4;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
@@ -129,6 +147,16 @@ a {
 a:hover, a:active {
   color: #4183C4;
   text-decoration: none;
+}
+
+.pill-cart {
+  background: #fff;
+  cursor: pointer;
+}
+
+.pill-cart:hover, .pill-cart:active {
+  background: #4183C4;
+  color: #fff;
 }
 
 ul, ol {
@@ -178,8 +206,9 @@ img {
   }
 }
 
-input {
-  border: 1px solid rgba(0, 0, 0, 0.137);
+input, textarea {
+  border: 0 solid rgba(0, 0, 0, 0.137);
+  border-radius: 5px;
   padding: 1vh;
   margin-bottom: 0vh;
   outline: none;
@@ -204,6 +233,34 @@ input {
 ::selection {
   color: #000;
   background: #eee;
+}
+
+.ngarumpul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .back-to-shop, .wrapper-footer {
+    margin-top: 0 !important;
+  }
+}
+
+.box-belanja {
+  min-height: 145.41px;
+}
+
+@media screen and (max-width: 800px) {
+  .box-belanja {
+    min-height: 195px;
+  }
 }
 
 .none {
@@ -295,7 +352,7 @@ input {
 }
 
 .masthead {
-  padding: 20px 30px;
+  padding: 10px 30px;
   border-bottom: 1px solid #eee;
 }
 
@@ -344,24 +401,22 @@ input {
 
 .site-name {
   margin: 0;
-  color: #333;
+  text-shadow: 1px 1px 3px #333;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: "Helvetica Neue", "Helvetica, Arial", sans-serif;
+  font-weight: 700;
   font-size: 28px;
   letter-spacing: 1px;
 }
 
 .site-description {
   margin: -5px 0 0 0;
-  color: #666;
+  text-align: center;
+  color: #eee;
+  text-shadow: 1px 4px 3px #343a40;
+  background-image: linear-gradient(yellow, red);
   font-size: 16px;
-}
-
-@media screen and (max-width: 800px) {
-  .site-description {
-    margin: 3px 0;
-  }
+  border-radius: 4px;
 }
 
 nav {
@@ -568,6 +623,7 @@ nav a {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: #eee;
+  width: 100%;
 }
 
 footer {
@@ -592,7 +648,7 @@ footer {
 .button {
   border-radius: 5px;
   background: #007bff;
-  padding: 10px;
+  padding: 5px 10px;
   color: #fff;
 }
 

@@ -5,7 +5,7 @@ layout: default
 
       <main class="content card single-product simpleCart_shelfItem" itemscope itemtype="http://schema.org/Product">
 <img class="display-none item_thumb" src="{{ page.featured_image_path }}"/>
-<span class="none item_link">https://meita-collection.netlify.app{{ page.url }}</span>
+<span class="none item_link">{{site.url}}{{ page.url }}</span>
 
         <section class="product-image">
           <div class="styles">
@@ -61,17 +61,17 @@ layout: default
 <div class="mobile-hide">
 <div class="ngarumpul">
 <a type="button" data-fancybox="" data-src="#whatsapp" href="javascript:;">
-<span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="50px" data-height="50px"></span></a>
-          <button id="item_add" class="btn item_add button" href="javascript:;" style="float: right;"> Add to Cart </button></div>
+<span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="45px" data-height="45px"></span></a>
+          <button id="item_add" class="btn item_add button" href="javascript:;" style="float:right;display:block!important;" onclick="myFunction()"> Add to Cart </button></div>
 </div>
         </section>
 <div class="mobile-show">
 <div class="floating-table">
 <div class="tombol-2">
 <div class="ngumpul"><a href="/cart/" id="cart-menu">
-<span class="iconify" data-icon="uil:shopping-bag" data-inline="false" style="color: #4183C4;" data-width="50px" data-height="50px"></span><span class="simpleCart_quantity" style="position: absolute;left: 40px;top: 10px;background: red;padding:2px 4px;border-radius:5px;color: #fff;font-size: 14px;font-weight: bold;"></span></a>
+<span class="iconify" data-icon="uil:shopping-bag" data-inline="false" style="color: #4183C4;" data-width="45px" data-height="45px"></span><span class="simpleCart_quantity" style="position: absolute;left: 40px;top: 10px;background: red;padding:2px 4px;border-radius:5px;color: #fff;font-size: 14px;font-weight: bold;"></span></a>
 <a type="button" data-fancybox="" data-src="#whatsapp" href="javascript:;">
-<span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="50px" data-height="50px"></span></a></div>
+<span class="iconify" data-icon="la:whatsapp" data-inline="false" style="color: #07bc4c;" data-width="45px" data-height="45px"></span></a></div>
           <a id="item_add" class="btn item_add button" href="javascript:;" style="float: right;"> Masuk Keranjang </a></div></div>
 </div>
 <form action="" method="post" style="display:none;width:100%;max-width:360px;margin:0px;align-items:stretch;" validate-form' id='whatsapp'>

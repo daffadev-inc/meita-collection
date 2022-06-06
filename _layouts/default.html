@@ -24,10 +24,11 @@
      document.getElementById("whatsapp-order").submit();
    }
  </script>
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <!-- Created with Jekyll-->
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
+    {% include preload.html %}
     <div class="wrapper-masthead">
     {% if page.url contains '/products/' %}
     <div class="mobile-hide">
@@ -36,21 +37,28 @@
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
           <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <h1 class="site-name"><a href="{{ site.baseurl }}/"><span style="color: #f09432;">Meita</span> <span style="color: #124cc8;">Collection</span></a></h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
 
           <nav>
-<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding:6px;border-radius:5px;"></span></a>
+<a class="pill-cart" href="/cart/" id="cart-menu">Cart <span class="iconify" data-icon="mdi:cart-variant" data-inline="false" data-width="30px" data-height="30px"></span><span class="simpleCart_quantity" style="font-size: 14px;font-weight: 700;position: relative;top: -10px;left: -10px;background: red;color: #fff;padding: 6px 10px;border-radius: 50px;"></span></a>
   {% for nav in site.data.navigation %}
-            <a href="{{ nav.url }}">{{ nav.title }}</a>
+            <a href="{{ nav.url }}" active>{{ nav.title }}</a>
   {% endfor %} 
           </nav>
         </header>
       </div>
 </div>
-
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
      <div class="container main grid flex">
+        <div id="url" style="display:none">NdanG</div>
         <div id="main" role="main">
           {{ content }}
         </div>
@@ -75,6 +83,23 @@
         countEl.value = count;
       }  
     }
+</script><script>
+$(document).ready(function(){
+$(".preloader").fadeOut();
+})
+</script>
+<script>
+$(document).ready(function(){
+    $( ".pill-cart" ).hover(function() {
+           $('.modal').modal({
+        show: true
+    });
+  });  
+});
+</script><script>
+function myFunction() {
+  alert("{{ page.title }} Berhasil Masuk Ke Keranjang...");
+}
 </script>
     <script src="{{ site.baseurl }}/js/jquery-2.2.4.min.js"></script>
     <script src="{{ site.baseurl }}/js/simpleCart.js"></script>

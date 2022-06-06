@@ -2,7 +2,7 @@ name: Meita Collection
 
 description: Koleksi Fashion Berkualitas
 
-avatar: /images/jekyll-logo.png
+avatar: /images/logo/MC.webp
 
 
 footer-links:
@@ -25,7 +25,7 @@ disqus:
 google_analytics:
 reCAPTCHA-key: 6LdPL-wZAAAAAAzUvjEWXHGLAgKL78wBzB1IR8t7
 
-url:
+url: https://meita-collection.netlify.app
 
 baseurl: ""
 
@@ -73,6 +73,7 @@ jekyll-archives:
   enabled:
     - categories
     - tags
+
   permalinks:
     categories: '/category/:name/'
     tags: '/tag/:name/'
