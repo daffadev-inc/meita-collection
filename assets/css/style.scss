@@ -105,6 +105,7 @@ a {
   &:hover, &:active {
     background: $blue;
     color: $white;
+@include mobile {background:none;color: $white;}
   }
 }
 
@@ -494,6 +495,10 @@ nav {
     position: relative;
 }
 
+.justCont{justify-content:space-between;}
+
+.w{@include mobile {width:100%}}
+
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
@@ -554,6 +559,7 @@ footer {
     align-items: center;
     font-size: small;
     background: #fff;
+    padding: 20px;
 
     @include mobile {
     font-size: 12px;

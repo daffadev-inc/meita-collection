@@ -58,13 +58,50 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/fancybox/dist/jquery.fancybox.min.css" />
 <script src="/assets/fancybox/dist/jquery.fancybox.min.js"></script>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LocalBusiness",
+  "name": "Meita Collection",
+  "address": "Cibeuti, Tasikmalaya",
+  "image": "https://meita-collection.netlify.app/images/logo/MC.webp",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": " 4.9/ 5",
+    "ratingCount": "25000",
+    "reviewCount": "2000"
+  },
+  "priceRange": "IDR 20.000"
+}
+</script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
  <script>
    function onSubmit(token) {
      document.getElementById("whatsapp-order").submit();
    }
  </script>
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius:20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
     <!-- Created with Jekyll-->
   </head>
 
@@ -241,7 +278,7 @@ form {
 
 select {
     border: 1px solid rgba(0, 0, 0, 0.137);
-    padding: 1.5vh 1vh;
+    padding: 1.2vh;
     margin-bottom: 4vh;
     outline: none;
     width: 100%;
@@ -399,17 +436,28 @@ a:hover {
             </div>
 <button class="btn cOut" data-fancybox="checkout" data-src="#checkout" href="javascript:;" data-action='submit'>CHECKOUT</button>
 
-<div id="checkout" style="display: none; width: 100%; max-width: 660px;">
+<div id="checkout" style="display: none; width: 100%; max-width: 600px;">
 <form id="whatsapp-order" class="data-form validate-form">
-<input class="order" id="AdminToko" type="hidden">
+<input class="order noWA" value='0821-1989-8205' id="AdminToko" type="hidden">
         <h4 class="mb-3">
             Checkout!
         </h4>
+<div class="row justCont">
+    <div class="col-mb-7 w">
   <label>Nama Lengkap</label>
   <input type="text" id="nama" class="nama wajib" placeholder="Nama Lengkap">
-
+</div>
+    <div class="col-mb-7 w">
   <label>No. Whatsapp</label>
   <input type="number" id="nomor" placeholder="No. Whatsapp" class="nomor wajib" style="-webkit-appearance:unset;">
+</div>
+</div>
+<div class="row justCont">
+    <div class="col-mb-7 w">
+  <label>Alamat E-Mail</label>
+  <input type="email" id="email" class="email wajib" placeholder="Alamat E-Mail">
+    </div>
+    <div class="col-mb-7 w">
 <label>SHIPPING</label>
  <select class="informasi wajib">
     <option class="text-muted" value="J%26T Express">J&T Express</option>
@@ -417,7 +465,8 @@ a:hover {
     <option class="text-muted" value="*Grab Express">*GrabExpress</option>
     <option class="text-muted" value="*GoSend">*GoSend</option>
   </select>
-
+    </div>
+</div>
   <label>Alamat Pengiriman</label>
   <input type="text" id="alamat" class="alamat wajib" name="Street" placeholder="Alamat Rumah">
   <input type="text" id="kota" class="kota wajib" name="City" placeholder="Kota">

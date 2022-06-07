@@ -140,7 +140,7 @@ form {
 
 select {
     border: 1px solid rgba(0, 0, 0, 0.137);
-    padding: 1.5vh 1vh;
+    padding: 1.2vh;
     margin-bottom: 4vh;
     outline: none;
     width: 100%;
@@ -298,17 +298,28 @@ a:hover {
             </div>
 <button class="btn cOut" data-fancybox="checkout" data-src="#checkout" href="javascript:;" data-action='submit'>CHECKOUT</button>
 
-<div id="checkout" style="display: none; width: 100%; max-width: 660px;">
+<div id="checkout" style="display: none; width: 100%; max-width: 600px;">
 <form id="whatsapp-order" class="data-form validate-form">
-<input class="order" id="AdminToko" type="hidden">
+<input class="order noWA" value='{{site.noWA}}' id="AdminToko" type="hidden">
         <h4 class="mb-3">
             Checkout!
         </h4>
+<div class="row justCont">
+    <div class="col-mb-7 w">
   <label>Nama Lengkap</label>
   <input type="text" id="nama" class="nama wajib" placeholder="Nama Lengkap">
-
+</div>
+    <div class="col-mb-7 w">
   <label>No. Whatsapp</label>
   <input type="number" id="nomor" placeholder="No. Whatsapp" class="nomor wajib" style="-webkit-appearance:unset;">
+</div>
+</div>
+<div class="row justCont">
+    <div class="col-mb-7 w">
+  <label>Alamat E-Mail</label>
+  <input type="email" id="email" class="email wajib" placeholder="Alamat E-Mail">
+    </div>
+    <div class="col-mb-7 w">
 <label>SHIPPING</label>
  <select class="informasi wajib">
     <option class="text-muted" value="J%26T Express">J&T Express</option>
@@ -316,7 +327,8 @@ a:hover {
     <option class="text-muted" value="*Grab Express">*GrabExpress</option>
     <option class="text-muted" value="*GoSend">*GoSend</option>
   </select>
-
+    </div>
+</div>
   <label>Alamat Pengiriman</label>
   <input type="text" id="alamat" class="alamat wajib" name="Street" placeholder="Alamat Rumah">
   <input type="text" id="kota" class="kota wajib" name="City" placeholder="Kota">

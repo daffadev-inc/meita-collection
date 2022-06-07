@@ -58,13 +58,50 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <link rel="stylesheet" href="/assets/fancybox/dist/jquery.fancybox.min.css" />
 <script src="/assets/fancybox/dist/jquery.fancybox.min.js"></script>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LocalBusiness",
+  "name": "Meita Collection",
+  "address": "Cibeuti, Tasikmalaya",
+  "image": "https://meita-collection.netlify.app/images/logo/MC.webp",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": " 4.9/ 5",
+    "ratingCount": "25000",
+    "reviewCount": "2000"
+  },
+  "priceRange": "IDR 20.000"
+}
+</script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
  <script>
    function onSubmit(token) {
      document.getElementById("whatsapp-order").submit();
    }
  </script>
+<style>
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius:20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
     <!-- Created with Jekyll-->
   </head>
 
@@ -111,7 +148,7 @@
 <form class='wrapHead data-form validate-form' id='whatsapp-order'>
 <div style="max-width: 656px;padding:5%;width: 100%;margin: 0 auto;border: 1px solid #eee;border-radius: 5px;box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;">
       <span>Pembayaran </span>sebesar <b><span class="simpleCart_total"></span></b><small> *belum termasuk ongkir </small>
-<input class='order' id='AdminToko' type='hidden'/>
+<input class='order noWA' value='0813-8626-7897' id='AdminToko' type='hidden'/>
       <ion-list>
         <ion-item>
           <ion-label position="floating">Nama Lengkap</ion-label>

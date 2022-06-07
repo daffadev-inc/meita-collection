@@ -1,0 +1,16 @@
+---
+layout: default
+title: Order Terkirim
+permalink: /order_terkirim.html
+---
+
+<style>footer{position:fixed;bottom:0;z-index:-1}.ceklis{position: absolute;left: 50%;top: 50%;background-color: #fff;transform: translate(-50%,-50%);box-shadow: 3px 3px 15px 7px #00000030;background-image: url(/images/success.gif);background-repeat: no-repeat;background-size: inherit;background-position: center;height: 90%;width: 90%;border-radius: 15px;overflow: hidden;}.text_il{position: absolute;bottom: 20%;text-align: center;z-index: 1;left: 30%;right: 30%;}</style>
+<script>
+    function pageRedirect() {
+        window.location.replace("{{ site.baseurl }}/link_bayar");
+    }      
+    setTimeout("pageRedirect()", 12500);
+</script>
+
+<div class="ceklis"></div>
+<div class="text_il">Silahkan melakukan pembayaran</div>

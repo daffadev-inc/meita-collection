@@ -159,6 +159,13 @@ a:hover, a:active {
   color: #fff;
 }
 
+@media screen and (max-width: 800px) {
+  .pill-cart:hover, .pill-cart:active {
+    background: none;
+    color: #fff;
+  }
+}
+
 ul, ol {
   margin: 15px 0;
   padding-left: 30px;
@@ -590,6 +597,16 @@ nav a {
   position: relative;
 }
 
+.justCont {
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+  .w {
+    width: 100%;
+  }
+}
+
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid #eee;
@@ -653,6 +670,7 @@ footer {
   align-items: center;
   font-size: small;
   background: #fff;
+  padding: 20px;
 }
 
 @media screen and (max-width: 800px) {
