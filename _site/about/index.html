@@ -8,14 +8,14 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
     <meta name="facebook-domain-verification" content="falwpvxd7uwctfodyz7ury4g4x4opi" />
-
     
     <meta name="description" content="Koleksi Fashion Berkualitas">
     <meta property="og:description" content="Koleksi Fashion Berkualitas" />
     
+    <meta property="og:img" content="/images/logo/MC.webp" />
     <meta name="author" content="Meita Collection" />
-
     
+    <meta property="og:img" content="" />
     <meta property="og:title" content="About" />
     <meta property="twitter:title" content="About" />
     
@@ -52,6 +52,7 @@
     
 <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 <link rel="alternate" type="application/rss+xml" title="Meita Collection - Koleksi Fashion Berkualitas" href="/feed.xml" />
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -113,12 +114,99 @@
   </div>
 </div>
 
+    <style media="screen">
+    	*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.popup{
+    background-color: #ffffff;
+    width: 35%;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none; 
+    text-align: center;
+}
+@media screen and (max-width: 800px) {
+.popup{
+    width: 90%;}
+}
+.popup button{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin:  0 0 10px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+		background: #03549a;
+		border-radius: 100%;
+		width: 40px;
+		height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup h2{
+	margin-top: -20px;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+.body-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    overflow: hidden;
+}
+    </style>
+<div class="body-popup">
+    <div class="popup">
+        <button id="close">&times;</button>
+        <h2>Pemberitahuan</h2>
+        <p>
+            WebStore <b>Meita Collection</b> Masih Dalam Pemeliharan, Tidak Diperkenankan Melakukan <b>Transaksi</b> Apapun.<br/> <b style="font-size:12px">Developer Tidak Bertanggung Jawab Jika hal tersebut terjadi</b>
+        </p>
+        <!--<a href="#">Let's Go</a>-->
+    </div>
+</div>
+<script type="text/javascript">
+window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000 
+    )
+});
+
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup, .body-popup").style.display = "none";
+});
+    </script>
+
     <div class="wrapper-masthead">
     
         <header class="masthead clearfix">
-          <a href="/" class="site-avatar"><img src="/images/logo/MC.webp" /></a>
+          <a href="/products" class="site-avatar"><img src="/images/logo/MC.webp" /></a>
           <div class="site-info">
-            <h1 class="site-name"><a href="/"><span style="color: #f09432;">Meita</span> <span style="color: #124cc8;">Collection</span></a></h1>
+            <h1 class="site-name"><a href="/products"><span style="color: #f09432;">Meita</span> <span style="color: #124cc8;">Collection</span></a></h1>
             <p class="site-description">Koleksi Fashion Berkualitas</p>
           </div>
 
@@ -142,15 +230,15 @@
           <article class="page">
 
   <div class="entry">
-    <p>Some information about you!</p>
+    <p>Some information For you!</p>
 
 <h3 id="more-information">More Information</h3>
 
-<p>A place to include any other types of information that you’d like to include about yourself.</p>
+<p>Toko WebShop Masih dalam pemeliharaan, tidak diperkenankan melakukan <b>transaksi</b> apapun.</p>
 
-<h3 id="contact-me">Contact me</h3>
+<h4 id="contact-me">Contact me</h4>
 
-<p><a href="mailto:email@domain.com">email@domain.com</a></p>
+<p><a href="tel:+6282119898205"><span style="color:red">Meita Collection</span></a></p>
 
   </div>
 </article>

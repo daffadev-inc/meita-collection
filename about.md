@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Some information For you!
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Toko WebShop Masih dalam pemeliharaan, tidak diperkenankan melakukan <b>transaksi</b> apapun.
 
-### Contact me
+#### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[<span style="color:red">Meita Collection</span>](tel:+6282119898205)
