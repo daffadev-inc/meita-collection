@@ -175,6 +175,13 @@ function myCart() {
     {% if page.url == '/cart' %}
       <script async src="{{ site.baseurl }}/js/form-order.js"></script>
     {% endif %}
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('{{ site.baseurl }}/sw.js')
+    })
+  }
+</script>
 
     {% include analytics.html %}
   </body>
