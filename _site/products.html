@@ -8,13 +8,16 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
     <meta name="facebook-domain-verification" content="falwpvxd7uwctfodyz7ury4g4x4opi" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meita-collection.netlify.app/products">
+    <meta name="author" content="Meita Collection" />
     
     <meta property="og:img" content="/images/logo/MC-logo.png" />
     <meta name="description" content="Koleksi Fashion Berkualitas">
     <meta property="og:description" content="Koleksi Fashion Berkualitas" />
     
-    <meta name="author" content="Meita Collection" />
     
+    <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -121,7 +124,7 @@
 .popup{
     background-color: #ffffff;
     width: 35%;
-    padding: 30px 40px;
+    padding: 0px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -174,11 +177,7 @@
 <div class="body-popup">
     <div class="popup">
         <button id="close">&times;</button>
-        <h2>Pemberitahuan</h2>
-        <p>
-            WebStore <b>Meita Collection</b> Masih Dalam Pemeliharan, Tidak Diperkenankan Melakukan <b>Transaksi</b> Apapun.<br/> <b style="font-size:12px">Developer Tidak Bertanggung Jawab Jika hal tersebut terjadi</b>
-        </p>
-        <!--<a href="#">Let's Go</a>-->
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeita.andrianiambara%2Fvideos%2F705359797386977%2F&width=1280" width="360" height="640" style="border-radius:8px;border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
     </div>
 </div>
 <script type="text/javascript">
@@ -588,6 +587,13 @@ $(".preloader").fadeOut();
     
 
     
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+    })
+  }
+</script>
 
     
 
